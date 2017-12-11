@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Brow.Txt\Brow.Txt.csproj">
+      <Project>{888d40d4-98cd-4296-8621-51f2978f2db5}</Project>
+      <Name>Brow.Txt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
