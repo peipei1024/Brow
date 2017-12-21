@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Brow.Txt
 {
-    class LogTxt
+    public class LogTxt
     {
         private static int LOG_LEVENL = 0;
 

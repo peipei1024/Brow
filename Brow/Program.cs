@@ -11,8 +11,8 @@ namespace BrowConsoleApp
     {
         static void Main(string[] args)
         {
-            BrowLib.Register(new Txt());
-            BrowLib.GetDefault().ReadAllTxt();
+            BrowLib.Register(new Utf8Txt());
+            BrowLib.GetDefault().ReadAllTxt("");
         }
     }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src = "ejs.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+</head>
+<body>
+<div class="menu"></div>
+
+<script charset="UTF-8" type="text/template" id="menuTemplate">
+    <%if(data && data.length>0){%>
+    <ul>
+        <%data.forEach(function(curData,index){%>
+        <%var cName=index===0?'bg':null;%>
+        <li class="<%=cName%>">
+            <a href="#<%=curData.tag%>" columnId="<%=curData.columnId%>">
+                <%=curData.name%>
+                <i class="triangle">
+                    <span class="triLeft"></span>
+                    <span class="triRight"></span>
+                </i>
+            </a>
+        </li>
+        <%});%>
+    </ul>
+    <%}%>
+</script>
+
+
+<script>
+    alert('ss')
+        var data =
+            [
+                {
+                    "name": "NBA",
+                    "tag": "nba",
+                    "columnId": 100000
+                },
+                {
+                    "name": "欧洲杯",
+                    "tag": "ec",
+                    "columnId": 3
+                },
+                {
+                    "name": "中超",
+                    "tag": "csl",
+                    "columnId": 208
+                }
+            ];
+
+        var str=$("#menuTemplate").html();
+        alert(str)
+
+        var result=ejs.render(str, {data: data});
+
+        $(".menu").html(result);
+</script>
+
+
+
+</body>
+<html>
+

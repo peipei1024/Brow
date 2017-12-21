@@ -11,16 +11,18 @@ namespace Brow.Txt
         private static BrowLib brow = null;
         private LogTxt logTxt = null;
         private Utf8Txt utf8txt = null;
-        
+
         /// <summary>
         /// new LogTxt(int log_levenl, string p) 值越小越不记录
-        /// new Txt()
+        /// new Utf8Txt()
         /// </summary>
         /// <param name="t"></param>
         public static void Register(object t)
         {
             brow = new BrowLib(t);
         }
+
+       
 
         public static BrowLib GetDefault()
         {

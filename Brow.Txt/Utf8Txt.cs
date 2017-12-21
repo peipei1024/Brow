@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Brow.Txt
 {
-    class Utf8Txt
+    public class Utf8Txt
     {
         public string ReadAllTxt(string path)
         {
