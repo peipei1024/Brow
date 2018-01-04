@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9bd2c22-95be-40d2-9399-05edf83edbcc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://nlpir.infoacq.com/NLPIR/RootService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RootService.xsd" MetadataType="Schema" ID="ad76dc81-2aca-43e5-8939-a1d7dce9836e" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RootService.wsdl" MetadataType="Wsdl" ID="e27f9a30-dbfc-4701-b38f-938dec9cb198" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?wsdl" />
+    <MetadataFile FileName="RootService1.xsd" MetadataType="Schema" ID="6066ee84-6306-4853-a32e-fcdabe7d3012" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RootService.disco" MetadataType="Disco" ID="7a51bd4b-e9f7-4df5-9c51-fbcb6a4da195" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?disco" />
+    <MetadataFile FileName="RootService2.xsd" MetadataType="Schema" ID="7b999aea-89e6-4ad7-8697-6916341da2b6" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RootService1.wsdl" MetadataType="Wsdl" ID="d370815d-427a-49e5-a77e-2921beec0c34" SourceId="1" SourceUrl="http://nlpir.infoacq.com/NLPIR/RootService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

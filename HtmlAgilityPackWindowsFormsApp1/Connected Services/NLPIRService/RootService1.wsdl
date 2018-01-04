@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://nlpir.infoacq.com/NLPIR/RootService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRootService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="GetData" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getDatatable_InputMessage">
+    <wsdl:part name="parameters" element="getDatatable" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getDatatable_OutputMessage">
+    <wsdl:part name="parameters" element="getDatatableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getDataString_InputMessage">
+    <wsdl:part name="parameters" element="getDataString" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getDataString_OutputMessage">
+    <wsdl:part name="parameters" element="getDataStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_Execyu_InputMessage">
+    <wsdl:part name="parameters" element="Execyu" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_Execyu_OutputMessage">
+    <wsdl:part name="parameters" element="ExecyuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_participle_InputMessage">
+    <wsdl:part name="parameters" element="participle" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_participle_OutputMessage">
+    <wsdl:part name="parameters" element="participleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_AddWords_InputMessage">
+    <wsdl:part name="parameters" element="AddWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_AddWords_OutputMessage">
+    <wsdl:part name="parameters" element="AddWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_DelWords_InputMessage">
+    <wsdl:part name="parameters" element="DelWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_DelWords_OutputMessage">
+    <wsdl:part name="parameters" element="DelWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_AddSameWords_InputMessage">
+    <wsdl:part name="parameters" element="AddSameWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_AddSameWords_OutputMessage">
+    <wsdl:part name="parameters" element="AddSameWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_DelSameWords_InputMessage">
+    <wsdl:part name="parameters" element="DelSameWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_DelSameWords_OutputMessage">
+    <wsdl:part name="parameters" element="DelSameWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSameWords_InputMessage">
+    <wsdl:part name="parameters" element="getSameWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSameWords_OutputMessage">
+    <wsdl:part name="parameters" element="getSameWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getAllCustumWords_InputMessage">
+    <wsdl:part name="parameters" element="getAllCustumWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getAllCustumWords_OutputMessage">
+    <wsdl:part name="parameters" element="getAllCustumWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSummary_InputMessage">
+    <wsdl:part name="parameters" element="getSummary" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSummary_OutputMessage">
+    <wsdl:part name="parameters" element="getSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSummaryE_InputMessage">
+    <wsdl:part name="parameters" element="getSummaryE" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getSummaryE_OutputMessage">
+    <wsdl:part name="parameters" element="getSummaryEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getNewWords_InputMessage">
+    <wsdl:part name="parameters" element="getNewWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getNewWords_OutputMessage">
+    <wsdl:part name="parameters" element="getNewWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getFileNewWords_InputMessage">
+    <wsdl:part name="parameters" element="getFileNewWords" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getFileNewWords_OutputMessage">
+    <wsdl:part name="parameters" element="getFileNewWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getKeyExtracts_InputMessage">
+    <wsdl:part name="parameters" element="getKeyExtracts" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getKeyExtracts_OutputMessage">
+    <wsdl:part name="parameters" element="getKeyExtractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getFileKeyExtracts_InputMessage">
+    <wsdl:part name="parameters" element="getFileKeyExtracts" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getFileKeyExtracts_OutputMessage">
+    <wsdl:part name="parameters" element="getFileKeyExtractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_KeyExtract_ImportUserDict_InputMessage">
+    <wsdl:part name="parameters" element="KeyExtract_ImportUserDict" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_KeyExtract_ImportUserDict_OutputMessage">
+    <wsdl:part name="parameters" element="KeyExtract_ImportUserDictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_KeyExtract_ImportUserDict2_InputMessage">
+    <wsdl:part name="parameters" element="KeyExtract_ImportUserDict2" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_KeyExtract_ImportUserDict2_OutputMessage">
+    <wsdl:part name="parameters" element="KeyExtract_ImportUserDict2Response" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getclassifier_exec_InputMessage">
+    <wsdl:part name="parameters" element="getclassifier_exec" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getclassifier_exec_OutputMessage">
+    <wsdl:part name="parameters" element="getclassifier_execResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getclassifier_detail_InputMessage">
+    <wsdl:part name="parameters" element="getclassifier_detail" />
+  </wsdl:message>
+  <wsdl:message name="IRootService_getclassifier_detail_OutputMessage">
+    <wsdl:part name="parameters" element="getclassifier_detailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRootService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="urn:IRootService/GetData" message="IRootService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/GetDataResponse" message="IRootService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatatable">
+      <wsdl:input wsaw:Action="urn:IRootService/getDatatable" message="IRootService_getDatatable_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getDatatableResponse" message="IRootService_getDatatable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataString">
+      <wsdl:input wsaw:Action="urn:IRootService/getDataString" message="IRootService_getDataString_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getDataStringResponse" message="IRootService_getDataString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Execyu">
+      <wsdl:input wsaw:Action="urn:IRootService/Execyu" message="IRootService_Execyu_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/ExecyuResponse" message="IRootService_Execyu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="participle">
+      <wsdl:input wsaw:Action="urn:IRootService/participle" message="IRootService_participle_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/participleResponse" message="IRootService_participle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWords">
+      <wsdl:input wsaw:Action="urn:IRootService/AddWords" message="IRootService_AddWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/AddWordsResponse" message="IRootService_AddWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelWords">
+      <wsdl:input wsaw:Action="urn:IRootService/DelWords" message="IRootService_DelWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/DelWordsResponse" message="IRootService_DelWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSameWords">
+      <wsdl:input wsaw:Action="urn:IRootService/AddSameWords" message="IRootService_AddSameWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/AddSameWordsResponse" message="IRootService_AddSameWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelSameWords">
+      <wsdl:input wsaw:Action="urn:IRootService/DelSameWords" message="IRootService_DelSameWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/DelSameWordsResponse" message="IRootService_DelSameWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSameWords">
+      <wsdl:input wsaw:Action="urn:IRootService/getSameWords" message="IRootService_getSameWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getSameWordsResponse" message="IRootService_getSameWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCustumWords">
+      <wsdl:input wsaw:Action="urn:IRootService/getAllCustumWords" message="IRootService_getAllCustumWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getAllCustumWordsResponse" message="IRootService_getAllCustumWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSummary">
+      <wsdl:input wsaw:Action="urn:IRootService/getSummary" message="IRootService_getSummary_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getSummaryResponse" message="IRootService_getSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSummaryE">
+      <wsdl:input wsaw:Action="urn:IRootService/getSummaryE" message="IRootService_getSummaryE_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getSummaryEResponse" message="IRootService_getSummaryE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewWords">
+      <wsdl:input wsaw:Action="urn:IRootService/getNewWords" message="IRootService_getNewWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getNewWordsResponse" message="IRootService_getNewWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFileNewWords">
+      <wsdl:input wsaw:Action="urn:IRootService/getFileNewWords" message="IRootService_getFileNewWords_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getFileNewWordsResponse" message="IRootService_getFileNewWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getKeyExtracts">
+      <wsdl:input wsaw:Action="urn:IRootService/getKeyExtracts" message="IRootService_getKeyExtracts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getKeyExtractsResponse" message="IRootService_getKeyExtracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFileKeyExtracts">
+      <wsdl:input wsaw:Action="urn:IRootService/getFileKeyExtracts" message="IRootService_getFileKeyExtracts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getFileKeyExtractsResponse" message="IRootService_getFileKeyExtracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyExtract_ImportUserDict">
+      <wsdl:input wsaw:Action="urn:IRootService/KeyExtract_ImportUserDict" message="IRootService_KeyExtract_ImportUserDict_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/KeyExtract_ImportUserDictResponse" message="IRootService_KeyExtract_ImportUserDict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyExtract_ImportUserDict2">
+      <wsdl:input wsaw:Action="urn:IRootService/KeyExtract_ImportUserDict2" message="IRootService_KeyExtract_ImportUserDict2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/KeyExtract_ImportUserDict2Response" message="IRootService_KeyExtract_ImportUserDict2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getclassifier_exec">
+      <wsdl:input wsaw:Action="urn:IRootService/getclassifier_exec" message="IRootService_getclassifier_exec_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getclassifier_execResponse" message="IRootService_getclassifier_exec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getclassifier_detail">
+      <wsdl:input wsaw:Action="urn:IRootService/getclassifier_detail" message="IRootService_getclassifier_detail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRootService/getclassifier_detailResponse" message="IRootService_getclassifier_detail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
