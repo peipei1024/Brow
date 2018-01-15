@@ -32,14 +32,22 @@ namespace HtmlAgilityPackWindowsFormsApp1
             list.Add("11");
             list.Add("11");
             list.Add("11");
-            InitDataListView(list, 3);
+
+            DataListViewDataModel<string> data = new DataListViewDataModel<string>(5, list);
+
+            InitDataListView(data);
         }
 
 
-        private void InitDataListView<T>(List<T> list, int pagesize)
+        private void InitDataListView<T>(DataListViewDataModel<T> data)
         {
-            totalcountLabel.Text = "共" + list.Count + "条";
-            pagesizeLabel.Text = pagesize + "条/页";
+            totalcountLabel.Text = "共" + data.List.Count + "条";
+            pagesizeLabel.Text = data.Pagesize + "条/页";
+            pageLabel.Text = "当前第" + data.CurrentPage + "页";
+
+            dataListView.View = View.Details;
+            dataListView.Columns.Add("", 200, HorizontalAlignment.Left);
+            
         }
 
         private void homepageButton_Click(object sender, EventArgs e)
@@ -64,13 +72,34 @@ namespace HtmlAgilityPackWindowsFormsApp1
     }
 
 
-    public class DataListViewSettingModel
+    public class DataListViewDataModel<T>
     {
-        public DataListViewSettingModel(int? pagesize, int page)
-        {
-            this.pagesize = pagesize;
+        int pagesize;
+        int currentPage = 1;
+        List<T> list = new List<T>();
 
+        public int Pagesize { get => pagesize; set => pagesize = value; }
+        public int CurrentPage { get => currentPage; set => currentPage = value; }
+        public List<T> List { get => list; set => list = value; }
+
+        public DataListViewDataModel(int pagesize, List<T> list)
+        {
+            this.Pagesize = pagesize;
+            this.List = list;
         }
-        int pagesize = 10;
+        public DataListViewDataModel(List<T> list)
+        {
+            this.Pagesize = 10;
+            this.List = list;
+        }
+        public DataListViewDataModel(int pagesize)
+        {
+            this.Pagesize = pagesize;
+        }
+        public DataListViewDataModel()
+        {
+            this.Pagesize = 10;
+        }
+
     }
 }
