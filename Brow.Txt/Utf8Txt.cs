@@ -13,6 +13,8 @@ namespace Brow.Txt
         {
             FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader streamReader = new StreamReader(fileStream);
+            streamReader.Close();
+            fileStream.Close();
             return streamReader.ReadToEnd();
         }
     }

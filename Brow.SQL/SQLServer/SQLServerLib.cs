@@ -1,5 +1,4 @@
-﻿using Brow.SQL.BrowException;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,122 +10,42 @@ namespace Brow.SQL
 {
     class SQLServerLib
     {
-
-        internal List<SqlConnection> connPool = new List<SqlConnection>();
-        internal int connCount = 30;
-        internal List<string> passwordList = new List<string>();
-
-        internal SQLServerLib(int count, string sqlServerPassword)
-        {
-            this.connCount = count;
-            InitConnPool(count, sqlServerPassword);
-        }
+        private string connectionString = "";
+        private SqlConnection con;
 
         internal SQLServerLib(string sqlServerPassword)
         {
-            InitConnPool(connCount, sqlServerPassword);
+            InitConnStr(sqlServerPassword);
         }
 
-        internal SQLServerLib(List<string> sqlServerPassword)
+        private string InitConnStr(string sqlServerPassword)
         {
-            InitConnPool(sqlServerPassword);
+            this.connectionString = sqlServerPassword;
+            return this.connectionString;
         }
 
 
-        private void InitConnPool(List<string> l)
+        public SqlConnection Connection
         {
-            this.passwordList = l;
-            for (int i = 0; i < l.Count; i++)
+            get
             {
-                SqlConnection con = new SqlConnection(l[i]);
-                con.Open();
-                connPool.Add(con);
+                if (con == null)
+                {
+                    con = new SqlConnection(connectionString);
+                    con.Open();
+                }
+                else if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                else if (con.State == ConnectionState.Broken)
+                {
+                    con.Close();
+                    con.Open();
+                }
+                return con;
             }
         }
-
-
-        private SqlConnection GetConnection()
-        {
-            int a = 0;
-            while (a < passwordList.Count)
-            {
-                if (connPool[a] == null)
-                {
-                    connPool[a] = new SqlConnection(passwordList[a]);
-                    connPool[a].Open();
-                    return connPool[a];
-                }
-                else if (connPool[a].State == ConnectionState.Closed)
-                {
-                    connPool[a].Open();
-                    return connPool[a];
-                }
-                else if (connPool[a].State == ConnectionState.Broken)
-                {
-                    connPool[a].Close();
-                    connPool[a].Open();
-                    return connPool[a];
-                }
-                else if(connPool[a].State == ConnectionState.Executing)
-                {
-
-                }
-                else if(connPool[a].State == ConnectionState.Fetching)
-                {
-
-                }
-                else if(connPool[a].State == ConnectionState.Open)
-                {
-                    return connPool[a];
-                }
-                else if(connPool[a].State == ConnectionState.Connecting)
-                {
-
-                }
-                a++;
-            }
-        }
-
-
-        /// <summary>
-        /// 初始化连接池
-        /// </summary>
-        /// <param name="count"></param>
-        /// <param name="sqlServerPassword"></param>
-        private void InitConnPool(int count, string sqlServerPassword)
-        {
-            for(int i = 0; i < count; i++)
-            {
-                SqlConnection con = new SqlConnection(sqlServerPassword);
-                con.Open();
-                connPool.Add(con);
-            }
-        }
-
-
-
-
-        //private SqlConnection GetConnection()
-        //{
-        //    int a = 0;
-        //    while (a < connCount)
-        //    {
-        //        if (connPool[a] == null)
-        //        {
-        //            connPool[a]
-        //        }
-        //        if (a > 15)
-        //        {
-        //            break;
-        //        }
-        //        a++;
-        //    }
-        //}
-
-        private static SqlConnection connection;
-        private static string connectionString = "";
-
-        
 
         public DataTable GetDataTable(string safeSql)
         {
@@ -136,28 +55,7 @@ namespace Brow.SQL
             da.Fill(ds);
             return ds.Tables[0];
         }
-
-        public SqlConnection Connection
-        {
-            get
-            {
-                if (connection == null)
-                {
-                    connection = new SqlConnection(connectionString);
-                    connection.Open();
-                }
-                else if (connection.State == System.Data.ConnectionState.Closed)
-                {
-                    connection.Open();
-                }
-                else if (connection.State == System.Data.ConnectionState.Broken)
-                {
-                    connection.Close();
-                    connection.Open();
-                }
-                return connection;
-            }
-        }
+        
 
         public int ExecuteCommand(string safeSql)
         {
@@ -166,7 +64,7 @@ namespace Brow.SQL
             return result;
         }
 
-        public int ExecuteSqlTran(List<string> SQLStringList)
+        public void ExecuteSqlTran(List<string> SQLStringList)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = Connection;
@@ -184,12 +82,11 @@ namespace Brow.SQL
                     }
                 }
                 tx.Commit();
-                return 1;
             }
             catch (Exception E)
             {
                 tx.Rollback();
-                return 2;
+                throw new BrowException(E.Message);
             }
         }
 

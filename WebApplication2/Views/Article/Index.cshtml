@@ -1,0 +1,100 @@
+﻿@model IEnumerable<WebApplication2.Models.Article>
+
+@{
+    ViewBag.Title = "View1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View1</h2>
+
+<p>
+
+</p>
+
+<div class="surface clearfix">
+    <h4 class="title_button">@Html.ActionLink("发布文章", "Create")</h4>
+
+    <!--表格-->
+    <table class="table table-hover">
+        <colgroup>
+            <col width="80">
+            <col width="152">
+            <col width="60">
+            <col width="70">
+            <col width="100">
+            <col width="60">
+            <col width="220">
+        </colgroup>
+        <tr class="text-danger" style="background:#f3f3f3">
+            <th class="text-center">编号</th>
+            <th class="text-center maxW">标题</th>
+            <th class="text-center">发布者</th>
+            <th class="text-center">栏目</th>
+            <th class="text-center">创建时间</th>
+            <th class="text-center">状态</th>
+            <th class="text-center">操作</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Newsid)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Newstitle)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Editor)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Classid)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Creattime)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        <button type="button" class="no_bac button">@Html.ActionLink("修改", "Edit", new { id=item.Newsid })</button>
+                        <button type="button" value="发布" class="b_green button">发布</button>
+                        <button type="button" value="发布" class="b_green button">发布</button>
+                        <button type="button" value="发布" class="b_green button">发布</button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <!--底部页码-->
+    <div class="page_box">
+        <div id="box" class="box"></div>
+    </div>
+    <script type="text/javascript" src="../js/paging.js"></script>
+    <!--底部页码结束-->
+    <!--版权出处-->
+    <div class="source">
+        汽场（北京）信息科技有限公司
+    </div>
+    <!--遮罩-->
+    <div class="myself_mark" id="myself_mark" style="display:none;"></div>
+    <!--预览-->
+    <div class="mob_box ale_win_con">
+        <iframe id="mob_art" name="mob_art" frameborder="0" scrolling="yes" src=""></iframe>
+    </div>
+</div>
+

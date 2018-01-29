@@ -55,5 +55,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Brow.SQL\Brow.SQL.csproj">
+      <Project>{91082de6-bb62-40ec-be8a-08e8ef667baf}</Project>
+      <Name>Brow.SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

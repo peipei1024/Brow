@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+
+#BOX{
+	width:100%;
+	height:auto;
+	min-width:1024px;
+}
+.header_box{
+	height:38px;
+	background:#000;
+	text-align:center;
+	padding:15px 40px;
+	min-width:944px;
+}
+.title_name{
+	float:left;
+	font-size:24px;
+	color:#fff;
+	line-height:68px;
+}
+.title_name img{
+	float:left;
+	width:55px;
+	height:38px;
+}
+.title_name span{
+	float:left;
+	font-size:24px;
+	color:#fff;
+	line-height:38px;
+	margin-left:10px;
+	border-left:1px solid #fff;
+	padding-left:10px;
+}
+.userName{
+	float:right;
+	line-height:38px;
+	color:#fff;
+	font-size:14px;
+	vertical-align:middle;
+}
+.userName span,.userName i{
+	color:#fff;
+	font-size:14px;
+	line-height:38px;	
+}
+.search_index_box{
+	float:right;
+	width:192px;
+	height:22px;
+	background:#fff;
+	border:1px solid #fff;
+	margin-top:8px;
+	margin-right:62px;	
+}
+.search_index_box input{
+	width:160px;
+	box-sizing:border-box;
+	height:100%;
+	float:left;
+	padding:0 10px;
+	border:none;
+	outline:none;	
+}
+.search_index_box a{
+	float:right;
+	width:32px;
+	height:100%;
+	background:#000;
+	text-align:center;
+}
+.search_index_box a i{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(../img/search.png) no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	-webkit-background-size:100% 100%;
+	-o-background-size:100% 100%;
+	margin-top:3px;	
+}
+.nav_box{
+	position:absolute;
+	top:68px;
+	left:0;
+	bottom:0;
+	background:#2a2a2a;
+	width:200px;
+	padding-top:4px;
+	overflow:hidden;
+	z-index:20;
+}
+.content_box{
+	position:absolute;
+	top:68px;
+	left:200px;
+	right:0;
+	bottom:0;
+	min-width:742px;
+	background:#fff;
+	overflow:hidden;	
+}
+
+/*
+***
+	页面细节具体样式
+***
+*/
+
+.MainNav_box{
+	position:relative;
+	width:100%;
+	padding-bottom:95px;
+}
+.mainN{
+	margin-top:6px;
+	color:#fff;
+}
+.mainN2{
+	margin-top:10px;
+	color:#fff;
+}
+.mainN3{
+	color:#fff;
+}
+.mainN a,.mainN2 a,.mainN3 a{
+	display:block;
+	height:20px;
+	overflow:hidden;
+}
+.mainN a{
+	padding:10px 20px 10px 40px;
+	width:140px;
+}
+.mainN2 a{
+	width:140px;
+	padding:10px 20px 8px 40px;
+	cursor:cell;
+}
+.mainN3 a{
+	padding:10px 20px 10px 56px;
+}
+.mainN a span,.mainN2 a span{
+	float:left;
+	width:96px;
+	padding:0 6px;
+	font-size:20px;
+	color:#fff;
+}
+.mainN3 a span{
+	float:left;
+	width:96px;
+	padding:0 6px;
+	font-size:16px;
+	line-height:20px;
+	color:#fff;
+}
+.mainN a i.l{
+	float:left;
+	width:16px;
+	font-size:16px;
+	color:#fff;
+	margin-top:4px;	
+}
+.mainN2 a i.l{
+	float:left;
+	width:16px;
+	font-size:14px;
+	color:#fff;
+	margin-top:4px;	
+}
+.mainN a i.r,.mainN3 a i.r{
+	float:right;
+	width:16px;
+	font-size:16px;
+	color:#cfcfcf;
+	margin-top:2px;	
+}
+.nav_active{
+	background-color:#fff;
+}
+.nav_active a span,.nav_active a i.l,.nav_active a i.r,.nav_active a i{
+	color:#000;
+}
+
+.basics:hover{
+	background-color:rgba(255,255,255,.1);	
+}
+.nav_active:hover{
+	background-color:#fff;
+}
+
+
+/*右侧主框架*/
+.main_content{
+	width:100%;
+	height:100%;
+}
+#myIframe{
+	width:100%;
+	height:100%;	
+}
+
+/*表类*/
+.surface{
+	padding-right:40px;
+	padding-top:26px;
+	padding-left:42px;
+}
+.awards_tit_box{
+	width:100%;
+	border-bottom:1px solid #b3b3b3;
+	padding-bottom:20px;	
+}
+.title_button{
+	width:70px;
+	height:30px;
+	color:#fff;
+	font-size:12px;
+	background:#3ba5ec;
+	line-height:30px;
+	text-align:center;
+	border-radius:4px;
+	cursor:pointer;
+}
+.awards_tit_button{
+	width:100px;	
+}
+.awards_conference{
+	padding-top:20px;	
+}
+.awards_conference a{
+	box-sizing:border-box;
+	display:inline-block;
+	border:1px solid #000;
+	border-radius:4px;
+	overflow:hidden;
+	font-size:12px;
+	color:#000;
+	text-align:center;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	margin-right:12px;
+	background:#fff;	
+}
+.awards_conference a.awaCon_hover_button{
+	background:#f27f39;
+	color:#fff;
+	border-color:#f27f39;
+}
+.table{
+	width:100%;
+	margin-top:22px;
+	table-layout: fixed;	
+}
+.table2{
+	width:100%;
+	table-layout:fixed;	
+}
+.table td,.table2 td{
+	height:46px;
+}
+.table td div.cell,.table2 td div.cell{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:0 6px;
+}
+.table td p,.table2 td p{
+	height:30px;
+	border:1px solid #ddd;
+	line-height:30px;
+	border-radius:4px;
+}
+.table td p span,.table2 td p span{
+	margin-left:10px;	
+}
+.blue i{
+	color:#3ba5ec;
+}
+.green i{
+	color:#11c36b;	
+}
+.table-hover tr{
+	border:1px solid #ddd;	
+}
+.table-hover tr:hover{
+	background:#ebf7ff;	
+}
+.table-hover2 tr:hover{
+	background:#ebf7ff;	
+}
+.text-danger{
+	height:24px;	
+}
+.table-hover2 .text-danger{
+	border:1px solid #ddd;	
+}
+.text-center{
+	text-align:center;
+}
+.text-left{
+	text-align:left;
+}
+.button{
+	width:38px;
+	height:22px;
+	border-radius:4px;
+	overflow:hidden;
+	cursor:pointer;		
+}
+.no_bac{
+	border:1px solid #000;
+	background:#fff;
+}
+.b_blue{
+	background:#3ba5ec;
+	border:1px solid #3ba5ec;
+	color:#fff;	
+}
+.b_green{
+	background:#11c36b;
+	border:1px solid #11c36b;
+	color:#fff;	
+}
+.b_orange{
+	background:#f27f39;
+	border:1px solid #f27f39;
+	color:#fff;	
+}
+.b_black{
+	background:#000;
+	border:1px solid #000;
+	color:#fff;	
+}
+.publish_button{
+	background:#fff;
+	border:1px solid #000;	
+}
+
+/*不能点击操作的元素*/
+button[disabled=disabled]{
+	background:#f3f3f3;
+	border:1px solid #ddd;
+	color:#b9b9b9;
+	cursor:not-allowed;
+}
+
+
+/*出处*/
+.source{
+	padding:64px 0 30px;
+	text-align:center;
+	clear:both;
+}
+
+/*弹窗遮罩*/
+.myself_mark{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:999px;
+	background:#666;
+	opacity:0.4;
+	left:0;
+	top:0;	
+}
+
+/*视频管理*/
+
+.video_title{
+	font-size:18px;
+	color:#000;	
+}
+.video_up_box{
+	margin-top:20px;	
+}
+.video_up_box a{
+	display:inline-block;
+	vertical-align:middle;
+	width:90px;
+	height:30px;
+	font-size:12px;
+	color:#fff;
+	line-height:30px;
+	text-align:center;
+	border-radius:4px;
+	overflow:hidden;	
+}
+.iQy_btn{
+	background:#11c36b;
+}
+.qic_btn{
+	background:#3ba5ec;
+	margin-left:20px;	
+}
+.num_box{
+	width:40px;
+	height:30px;
+	background:#3ba5ec;
+	line-height:30px;
+	text-align:center;
+	color:#fff;
+	font-size:24px;	
+}
+.vi_tit h4{
+	line-height:30px;
+}
+.tit_txt{
+	width:652px;
+	height:30px;
+	box-sizing:border-box;
+	border:1px solid #ddd;
+}
+.tit_txt input{
+	box-sizing:border-box;
+	width:100%;
+	height:28px;
+	border:none;
+	outline:none;
+	padding:0 10px;	
+}
+
+
+
+
+
+
+
+
+

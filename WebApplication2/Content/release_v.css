@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+.release_con{
+	margin-top:20px;
+	height:auto;
+	padding:0 20px;
+}
+.title_re{
+	padding-bottom:10px;
+	border-bottom:1px solid #b3b3b3;
+	font-size:20px;
+	color:#000;
+}
+.title_re span{
+	font-size:12px;
+	color:#585858;
+	vertical-align:bottom;
+	margin-left:12px;	
+}
+.re_txt_box{
+	padding:0 50px;
+}
+/**左固右适用模块*/
+.lr_model{
+	width:100%;
+	position:relative;
+	margin-top:20px;	
+}
+.lr_model h4{
+	width:58px;
+	font-size:12px;
+	color:#000;	
+}
+.adaption{
+	position:absolute;
+	left:58px;
+	right:0;
+	top:0;	
+}
+.model_zhushi{
+	padding-left:58px;
+	color:#acacac;
+	font-size:12px;
+	line-height:22px;	
+}
+.fengmian_pic{
+	width:158px;
+	height:88px;
+	border:1px solid #c1c1c1;
+	background:url(../img/upload_pic.png) no-repeat;
+	position:relative;	
+}
+.fengmian_pic img{
+	width:100%;
+	height:100%;	
+}
+.fengmian_box{
+	margin-top:16px;	
+}
+.fengmian_box h4{
+	line-height:90px;	
+}
+#fengmian_close{
+	position:absolute;
+	width:22px;
+	height:22px;
+	background:url(../img/close_btn.png) no-repeat;
+	right:0;
+	top:0;	
+}
+
+/*不自适应下的左右浮动*/
+.upLoad_video{
+	margin-top:20px;	
+}
+.upLoad_video h4{
+	line-height:40px;	
+}
+.up_con{
+	width:100px;
+	height:40px;
+	background:#3ba5ec;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	font-size:16px;
+	cursor:pointer;	
+}
+.jianjie_video{
+	width:689px;
+	height:138px;
+	border:1px solid #ddd;
+	resize:none;
+	box-sizing:border-box;
+	padding:10px;
+	line-height:20px;	
+}
+.jianjie_box{
+	margin-top:30px;s	
+}
+.jianjie_box h4{
+	height:138px;	
+}
+.aiQ_Id_box{
+	margin-top:23px;	
+}
+.aiQ_Id_box h4{
+	line-height:24px;	
+}
+.aiQ_Id{
+	height:22px;
+	border:1px solid #ddd;
+	width:248px;	
+}
+.time_box_vi{
+	margin-top:24px;	
+}
+.time_box_vi h4{
+	line-height:30px;
+	height:54px;	
+}
+.time_input{
+	float:left;
+	margin-right:16px;	
+}
+.time_input input{
+	width:58px;
+	height:28px;
+	border:1px solid #ddd;
+	margin-right:6px;
+}
+.time_input p{
+	line-height:24px;
+	color:#acacac;	
+}
+.column_video_box{
+	margin-top:20px;	
+}
+.column_video_box h4{
+	line-height:30px;	
+}
+
+.column_se_vi{
+	width:248px;
+	height:28px;
+	border:1px solid #ddd;	
+}
+.recommend_vi{
+	margin-top:22px;	
+}
+.mor_chose_vi input{
+	width:12px;
+	height:12px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.mor_chose_vi{
+	float:left;
+}
+.mor_chose_vi label{
+	padding-right:13px;	
+}
+.right_line{
+	padding-right:30px;
+	border-right:1px solid #ddd;
+	margin-right:30px;
+}
+
+/*功能按钮*/
+.video_fun_box{
+	margin-top:58px;
+}
+.video_fun_box a{
+	display:inline-block;
+	width:100px;
+	height:40px;
+	background:#f1ab24;
+	color:#fff;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+	border-radius:4px;
+	margin-right:20px;	
+}
+#preser_btn_v{
+	background:#3ba5ec;	
+}
+.laiyuan{
+	text-align:center;
+	margin-top:80px;
+	padding-bottom:30px;
+}
+
+/*爱奇艺上传视频*/
+.all_percent {
+	width: 689px;
+	height: 10px;
+	border: #5BB75B 1px solid;
+	padding: 2px;
+	position: relative;
+	margin-top:10px;
+	margin-left:58px;
+}
+.percent {
+	width: 0px;
+	height: 10px;
+	background: #5BB75B;
+}
+
+.percent_text {
+	color: #000;
+	width: 100%;
+	height: 10px;
+	line-height: 23px;
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.file_name_info {
+	width: 724px;
+	font-weight: normal;
+	margin-top: 0px;
+	background: #FCFAE0;
+	padding: 5px;
+	border: #DDD 1px solid;
+	border-top: none;
+}
+
+.file_name_info span {
+	width: 360px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.file_name_info span em {
+	font-style: normal;
+	color: #51A351;
+	font-weight: bold;
+}
+
+.file_name, .file_id {
+	color: #51A351;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

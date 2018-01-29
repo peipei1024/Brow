@@ -1,0 +1,88 @@
+@charset "utf-8";
+html,body{
+	width:100%;
+	height:100%;	
+}
+.preview_box{
+	padding:50px;
+}
+.pc_mob_btn{
+	padding-bottom:40px;	
+}
+.pc_mob_btn a{
+	display:inline-block;
+	padding:12px;
+	font-size:18px;
+	border-radius:4px;
+	color:#fff;
+	background:#3ba5ec;	
+}
+.pc_mob_btn a.on{
+	background:#f1ab24;	
+}
+.exhibition_box{
+	width:100%;
+	height:auto;
+	margin-top:20px;	
+}
+.pc_box{
+	width:964px;
+	height:553px;
+	background:url(../img/PC_bac.png) no-repeat;
+	position:relative;	
+}
+#PC_art{
+	width:732px;
+	height:456px;
+	position:absolute;
+	left:114px;
+	top:32px;
+}
+.mob_box{
+	position:fixed;
+	width:384px;
+	height:793px;
+	background:url(../img/phone_bac.png) no-repeat;
+	top:50%;
+	left:50%;
+	margin-top:-392px;
+	margin-left:-192px;
+	display:none;	
+}
+#mob_art{
+	width:338px;
+	height:599px;
+	position:absolute;
+	top:96px;
+	left:23px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

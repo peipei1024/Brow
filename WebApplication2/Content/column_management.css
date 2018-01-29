@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+.surface{
+	padding-left:42px;
+	padding-right:70px;
+	padding-top:26px;
+	position:relative;
+	min-width:742px;	
+}
+.column_ma_module{
+	width:100%;
+	height:auto;
+	position:relative;
+}
+.stop_btn{
+	position:absolute;
+	right:-44px;
+	bottom:-16px;
+	width:30px;
+	height:30px;
+	background:url(../img/stop.png) no-repeat;	
+}
+.small_tit{
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #b3b3b3;
+	position:relative;
+}
+.small_tit h4{
+	float:left;
+	font-size:20px;
+	color:#000;
+	line-height:30px;	
+}
+.small_tit a.creat_btn{
+	float:left;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+	background:#3ba5ec;
+	border-radius:4px;
+	overflow:hidden;
+}
+.transfer_btn{
+	float:left;	
+	width:73px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+	background:#3ba5ec;
+	border-radius:4px;
+	overflow:hidden;
+	margin-left:20px;
+}
+
+.column_mo_list{
+	margin-top:20px;
+	width:100%;
+	height:auto;	
+}
+.module_list_box{
+	width:100%;
+	table-layout:fixed;	
+}
+.column_mo_list td{
+	padding:0 6px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;	
+}
+.t_head{
+	border:1px solid #ddd;
+	background:#f3f3f3;
+}
+.t_head tr{
+	height:24px;	
+}
+
+.t_center{
+	text-align:center;	
+}
+.t_left{
+	text-align:left;	
+}
+.t_body tr{
+	border:1px solid #ddd;
+	height:46px;	
+}
+.t_body tr:hover{
+	background:#ebf7ff;		
+}
+.t_ac button{
+	width:40px;
+	height:24px;
+	border:none;
+	border-radius:4px;
+	outline:none;
+	cursor:pointer;	
+}
+.t_ac .t_xiugai{
+	background:#fff;
+	color:#000;
+	border:1px solid #000;
+}
+.t_ac .b_green{
+	background:#11c36b;
+	color:#fff;
+}
+.t_ac .b_orange{
+	background:#f27f39;
+	border:1px solid #f27f39;
+	color:#fff;	
+}
+.t_ac .t_shanchu{
+	background:#000;
+	color:#fff;	
+}
+.video_mo .t_body tr{
+	height:60px;	
+}
+.t_tubiao img{
+	width:40px;
+	height:40px;	
+}
+/*不能点击操作的元素*/
+.t_ac button[disabled=disabled]{
+	background:#f3f3f3;
+	border:1px solid #ddd;
+	color:#b9b9b9;
+	cursor:not-allowed;
+}
+.jibie{
+	margin-right:10px;
+	color:red;
+}
+.cell{
+	width:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

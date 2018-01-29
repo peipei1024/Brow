@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>汽场</title>
+    <link rel="stylesheet" type="text/css" href="http://code.uemo.net/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/base.css" />
+    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="~/Content/paging.css" />
+    <link rel="stylesheet" href="~/Content/dialog.css" />
+    <link rel="stylesheet" href="~/Content/preview2.css" />
+    <link rel="stylesheet" href="~/Content/publish.css" />
+
+
+    <script type="text/javascript" src="../lib/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/iscroll.js"></script>
+</head>
+
+<body>
+    <div id="BOX">
+        <!--顶部header栏目-->
+        <div class="header_box clearfix">
+            <h3 class="title_name">
+                <img src="../img/logo.png" />
+                <span>汽场后台管理系统</span>
+            </h3>
+            <div class="userName">
+                <a href="javascript:;">
+                    <span>用户名</span>
+                    <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="search_index_box">
+                <input type="text" />
+                <a href="javascript:;">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+        <!--左侧nav导航栏-->
+        <div class="nav_box" id="wrapper">
+            <div class="MainNav_box">
+                <h3 class="mainN basics nav_active"> @Html.ActionLink("首页", "Index", "Home")</h3>
+                <h3 class="mainN basics nav_active"> @Html.ActionLink("视频", "Index", "Video")</h3>
+                <h3 class="mainN basics nav_active"> @Html.ActionLink("文章", "Index", "Article")</h3>
+                 @Html.ActionLink("文章", "Index", "Home")
+            </div>
+        </div>
+       
+        <!--左侧nav导航栏结束-->
+        <!--右侧内容版块开始-->
+        <div class="content_box">
+            <div class="main_content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/js.js"></script>
+</body>
+</html>

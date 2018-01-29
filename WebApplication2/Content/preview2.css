@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.mob_box{
+	position:fixed;
+	width:384px;
+	height:793px;
+	background:url(../img/phone_bac.png) no-repeat;
+	top:50%;
+	left:50%;
+	margin-top:-392px;
+	margin-left:-192px;
+	display:none;	
+}
+#mob_art{
+	width:338px;
+	height:599px;
+	position:absolute;
+	top:96px;
+	left:23px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

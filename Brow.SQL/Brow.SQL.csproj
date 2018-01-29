@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrowException\NoConnectionException.cs" />
+    <Compile Include="BrowException.cs" />
+    <Compile Include="EnumSQL.cs" />
     <Compile Include="SQLServer\SQLServerConnectionFactory.cs" />
     <Compile Include="IConnectionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

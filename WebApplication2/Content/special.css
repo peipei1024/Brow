@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+
+.publish_cont{
+	padding:20px;
+	min-width:984px;	
+}
+.publish_cont h2{
+	padding-bottom:10px;
+	border-bottom:1px solid #b3b3b3;
+	font-size:20px;
+	color:#000;	
+}
+.publish_cont h2 span{
+	font-size:12px;
+	color:#585858;
+	vertical-align:bottom;
+	margin-left:10px;	
+}
+
+
+/*
+	相关信息
+*/
+.infor_box{
+	margin-top:26px;
+	padding:0 18px;
+}
+
+.first{
+	padding:0 88px 0 30px;		
+}
+.step_infor_two{
+	width:100%;
+	position:relative;	
+}
+.step_infor_two h4{
+	width:58px;
+	line-height:30px;	
+}
+.step_tit_box{
+	position:absolute;
+	left:58px;
+	top:0;
+	right:0;	
+}
+.step_tit_box div.fl{
+	width:5.6%;
+	height:30px;
+	background:#3ba5ec;
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+}
+.step_tit_box div.fr{
+	box-sizing:border-box;
+	width:94.4%;
+	border:1px solid #ddd;
+	height:30px;	
+}
+.step_tit_box div.fr input{
+	box-sizing:border-box;
+	padding:0 12px;
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:12px;	
+}
+.first_tishi{
+	margin-left:58px;
+	height:24px;
+	font-size:12px;
+	color:#acacac;
+	line-height:24px;	
+}
+
+/*图片*/
+.cover{
+	margin-top:18px;	
+}
+.cover h4{
+	height:90px;
+	line-height:90px;
+}
+.cover_pic{
+	height:90px;	
+}
+.upload_pic{
+	float:left;
+	margin-right:10px;
+	width:158px;
+	height:88px;
+	border:1px solid #ddd;
+	background:url(../img/upload_pic.png) no-repeat;
+	cursor:pointer;	
+}
+.upload_pic img{
+	width:100%;
+	height:100%;	
+}
+.special_pic{
+	position:relative;	
+}
+.close_btn{
+	position:absolute;
+	right:1px;
+	top:1px;
+	width:22px;
+	height:22px;
+	background:url(../img/close_btn.png) no-repeat;	
+}
+
+/*
+	专题文章
+*/
+.spe_publish_btn button{
+	border:none;
+	background:#3ba5ec;
+	color:#fff;
+	padding:10px 24px;
+	border-radius:4px;
+	cursor:pointer;	
+}
+.special_art{
+	margin-top:54px;	
+}
+.special_art h4{
+	line-height:32px;
+}
+
+/*
+	专题页特有
+**/
+
+
+.spe_art_list_box{
+	margin-top:16px;
+	width:100%;
+	padding-bottom:40px;
+	border-bottom:1px solid #b3b3b3;	
+}
+
+/*添加栏目*/
+.pub_com{
+	margin-top:20px;	
+}
+.pub_com a{
+	display:inline-block;
+	width:140px;
+	height:56px;
+	border:1px solid #1c1819;
+	border-radius:4px;
+	background:#fff;
+	overflow:hidden;
+	font-size:20px;
+	color:#000;
+	text-align:center;
+	line-height:56px;
+}
+
+/*点击添加栏目需显示的box*/
+.pub_show_fun_box{
+	width:100%;
+	padding-top:20px;	
+}
+
+.com_txt input{
+	border:1px solid #ddd;
+	width:96px;
+	height:28px;
+	padding:0 5px;
+	line-height:28px;	
+}
+.com_txt span{
+	color:#acacac;
+	line-height:30px;
+	margin-left:12px;	
+}
+.special_art2{
+	margin-top:20px;	
+}
+
+/*功能点击按钮*/
+.fun_btn_box{
+	margin-top:100px;
+	height:40px;
+}
+.fun_btn_box li{
+	float:left;
+	width:90px;
+	height:100%;
+	text-align:center;
+	border-radius:4px;
+	margin:0 10px;
+	color:#fff;
+	overflow:hidden;
+}
+.fun_btn_box li a{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	color:#fff;
+	font-size:16px;
+	line-height:40px;	
+}
+.fun_blue{
+	background:#3ba5ec;	
+}
+
+.fun_o{
+	background:#f1ab24;
+}
+
+/*底部声明*/
+.statement_box{
+	width:100%;
+	font-size:12px;
+	margin:80px 0;
+	color:#000;
+	text-align:center;
+}
+
+
+/*
+	预览窗
+*/
+#dialog_yulan{
+	width:384px;
+	height:793px;
+	background:url(../img/phone_bac.png) no-repeat;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-top:-396px;
+	margin-left:-192px;
+	z-index:1000;	
+}
+#firstYl_frame{
+	position:absolute;
+	width:338px;
+	height:598px;
+	left:23px;
+	top:97px;
+}
+#search_ale_box{
+	width:816px;
+	height:606px;
+	border:2px solid #d7d7d7;
+	border-radius:4px;
+	overflow:hidden;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-409px;
+	margin-top:-304px;
+	background:#fff;
+	z-index:1000;	
+}
+#close_search{
+	position:absolute;
+	width:16px;
+	height:16px;
+	background:url(../img/search_close_pic.png) no-repeat;
+	top:6px;
+	right:6px;
+}
+.search_txt_box{
+	padding:0 56px;
+	margin-top:22px;	
+}
+.search_txt_box_ch input{
+	float:left;
+	box-sizing:border-box;
+	width:652px;
+	padding:0 10px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #ddd;
+}
+.search_btn{
+	float:right;
+	padding:5px 12px;
+	background:#3ba5ec;
+}
+.search_btn i{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	background:url(../img/search.png) no-repeat;	
+}
+.search_data_box{
+	width:100%;
+	height:496px;
+	background:#fff;
+	margin-top:24px;	
+}
+.search_data_box iframe{
+	width:100%;
+	height:100%;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

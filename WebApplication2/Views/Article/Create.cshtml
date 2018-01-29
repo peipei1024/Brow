@@ -1,0 +1,478 @@
+﻿@model WebApplication2.Models.Article
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div>
+        
+
+        <!--发表文章内容-->
+        <div class="publish_cont">
+            <h2>
+                发表文章
+            </h2>
+            <!--步骤1,2,3-->
+            <div class="step_box">
+
+                <!--信息相关box-->
+                <div class="infor_box">
+                    <!--步骤一填写内容信息-->
+                    <div class="step_infor first" style="display:block;">
+                        <!--文章标题录入-->
+                        <div class="step_infor_two">
+                            <h4>文章标题</h4>
+                            <div class="step_tit_box">
+                                <div class="fl" id="num">0</div>
+                                <div class="fr">
+                                    <input type="text" id="txt">
+                                </div>
+                            </div>
+                            <p class="first_tishi">最多可输24个字符</p>
+                        </div>
+                        <script>
+                        	$("#txt").keyup(function(){
+							   if($("#txt").val().length > 24){
+								   $("#txt").val( $("#txt").val().substring(0,24) );
+							   }
+							   $("#num").text($("#txt").val().length ) ;
+							});
+                        </script>
+                        <!--文章内容录入HTML在线编辑器-->
+                        <div class="step_infor_two html_edit">
+                            <h4>文章内容</h4>
+                            <div class="step_edit_box">
+                                我是html在线编辑器
+                                <a href="home.html" class="shear_btn" target="shear_frame">
+                                    <button>剪切图片</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!--文章导读录入-->
+                        <div class="step_infor_two intro">
+                            <h4>文章标题</h4>
+                            <div class="step_tit_box intro_put">
+                                <textarea></textarea>
+                            </div>
+                            <p class="first_tishi">最多可输140个字符</p>
+                        </div>
+                        <!--封面图片上传-->
+                        <div class="step_infor_two cover">
+                            <h4>封面图片</h4>
+                            <div class="step_tit_box cover_pic">
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                            </div>
+                            <p class="first_tishi">封面图片必须是1张或3张  图片比例16：9  只能上传jpg/png文件,切不超过500kb</p>
+                        </div>
+                        <!--用户权限状态模块-->
+                        <div class="power_box" id="power_box">
+                            <!--类型选择器-->
+                            <div class="step_infor_two choice">
+                                <h4>类型</h4>
+                                <div class="step_tit_box choice_box">
+                                    <div class="radio_group">
+                                        <label class="radio_wrapper wrapper_checked" name="原创">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            原创
+                                        </label>
+                                        <label class="radio_wrapper" reprint="true" name="转载">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            转载
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--类型选择器结束-->
+                            <!--来源选择器-->
+                            <div class="step_infor_two source_infor" id="step_fun_box">
+                                <h4>来源</h4>
+                                <div class="step_tit_box source_infor_box">
+                                    <div class="radio_group">
+                                        <label class="radio_wrapper wrapper_checked">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            汽场
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            汽场商业评论
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            汽车消费报告
+                                        </label>
+                                    </div>
+                                    <div class="source_txt">
+                                        <input type="text" placeholder="其它入住媒体" id="other_radio" disabled="disabled"><!--权限禁用时加disabled="disabled"-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--来源选择器结束-->
+                        </div>
+                        <script>
+                        	$('#power_box .radio_group').each(function(index, element) {
+                                var oPower = $(this);
+								radioFun(oPower,calBck);
+								function calBck(Key){
+									if(Key){
+										$('#step_fun_box').addClass('power_2');
+										$('#other_radio').attr('disabled',false);
+									}else{
+										$('#step_fun_box').removeClass('power_2');
+										$('#other_radio').attr('disabled','disabled');
+									}
+								}
+                            });
+                        </script>
+                        <!--作者-->
+                        <div class="step_infor_two author_txt">
+                            <h4>作者</h4>
+                            <div class="step_tit_box author_txt_box">
+                                <div class="author_input">
+                                    <input type="text" placeholder="作者" id="authorIn">
+                                </div>
+                            </div>
+                        </div>
+                        <!--关键字-->
+                        <div class="step_infor_two keyword">
+                            <h4>关键字</h4>
+                            <div class="step_tit_box keyword_box">
+                                <div class="keyword_input">
+                                    <input type="text" placeholder="关键字">
+                                </div>
+                            </div>
+                            <p class="first_tishi">关键词之间用空格分开，如：车型 美女</p>
+                        </div>
+                        <!--栏目-->
+                        <div class="step_infor_two column_infro">
+                            <h4>栏目</h4>
+                            <div class="step_tit_box column_infro_box">
+                                <div class="column_select">
+                                    <select>
+                                        <option value="栏目1">栏目1</option>
+                                        <option value="栏目2">栏目2</option>
+                                        <option value="栏目3">栏目3</option>
+                                        <option value="栏目4">栏目4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--底部功能按钮-->
+                        <ol class="fun_btn_box clearfix" stepNum="1">
+                            <li class="fun_blue preservation">
+                                <a href="javascript:;">
+                                    保存草稿
+                                </a>
+                            </li>
+                            <li class="fun_green next">
+                                <a href="javascript:;">
+                                    下一步
+                                </a>
+                            </li>
+                            <li class="fun_o release">
+                                <a href="javascript:;">
+                                    发布
+                                </a>
+                            </li>
+                            <li class="fun_o preview">
+                                <a href="home.html" target="firstYl_frame">
+                                    预览
+                                </a>
+                            </li>
+                            <li class="fun_o">
+                                <a href="javascript:;">
+                                    取消
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                    <!--步骤二控制显示信息-->
+                    <div class="step_infor second" style="display:none;">
+                        <!--标题-->
+                        <div class="control_infro">
+                            <h4>文章标题</h4>
+                            <div class="control_infro_box control_title_box">
+                                文章标题文章标题
+                            </div>
+                        </div>
+                        <!--价格-->
+                        <div class="control_infro price_tit">
+                            <h4>价格</h4>
+                            <div class="control_infro_box price_con">
+                                <div class="control_con">
+                                    <input type="text" placeholder="0.00">元
+                                </div>
+                            </div>
+                        </div>
+                        <!--左边显示-->
+                        <div class="control_infro left_sh">
+                            <h4>左边显示</h4>
+                            <div class="control_infro_box control_title_box">
+                                <div class="author_input">
+                                    <input type="text" id="show_left">
+                                </div>
+                            </div>
+                        </div>
+                        <!--中间显示-->
+                        <div class="control_infro left_sh">
+                            <h4>中间显示</h4>
+                            <div class="control_infro_box control_title_box">
+                                <div class="author_input">
+                                    <input type="text" id="show_center">
+                                </div>
+                            </div>
+                        </div>
+                        <!--右边显示-->
+                        <!--用户权限状态模块-->
+                        <div class="power_box">
+                            <!--右边显示-->
+                            <div class="step_infor_two choice">
+                                <h4>右边显示</h4>
+                                <div class="step_tit_box choice_box">
+                                    <div class="radio_group radioG">
+                                        <label class="radio_wrapper wrapper_checked">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            阅读量
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            评论量
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--推荐-->
+                            <div class="step_infor_two choice">
+                                <h4>推荐</h4>
+                                <div class="step_tit_box choice_box">
+                                    <div class="radio_group radioG">
+                                        <label class="radio_wrapper wrapper_checked">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            荐读轮播
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            荐读列表
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            新车轮播
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            产经轮播
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--推送-->
+                            <div class="step_infor_two choice">
+                                <h4>推送</h4>
+                                <div class="step_tit_box choice_box">
+                                    <div class="radio_group radioG">
+                                        <label class="radio_wrapper wrapper_checked">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            推送
+                                        </label>
+                                        <label class="radio_wrapper">
+                                            <span class="radio">
+                                                <span class="radio_inner">
+                                                    <i></i>
+                                                </span>
+                                                <input type="radio" class="radio_input">
+                                            </span>
+                                            不推送
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--推送结束-->
+                        </div>
+                        <script>
+                        	$('.radioG').each(function(index, element) {
+                                var oRadio = $(this);
+								morChose(oRadio);
+                            });
+                        </script>
+                        <!--封面图片上传-->
+                        <div class="step_infor_two cover">
+                            <h4>封面图片</h4>
+                            <div class="step_tit_box cover_pic">
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                                <div class="upload_pic">
+                                    <img>
+                                </div>
+                            </div>
+                            <p class="first_tishi">封面图片必须是1张或3张  图片比例16：9  只能上传jpg/png文件,切不超过500kb</p>
+                        </div>
+                        <!--底部功能按钮-->
+                        <ol class="fun_btn_box clearfix" stepNum="2">
+                            <li class="fun_blue preservation">
+                                <a href="javascript:;">
+                                    保存草稿
+                                </a>
+                            </li>
+                            <li class="fun_green next">
+                                <a href="javascript:;">
+                                    下一步
+                                </a>
+                            </li>
+                            <li class="fun_o last_step">
+                                <a href="javascript:;">
+                                    上一步
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                    <!--步骤三审核-->
+                    <div class="step_infor" style="display:none;">
+                        <div class="third">
+                            <!--文章状态-->
+                            <div class="third_examine">
+                                <h4>文章状态</h4>
+                                <div class="third_examine_con published_n aaa">
+                                    <!--已发布class为published_y-->
+                                    未发布
+                                </div>
+                            </div>
+                            <!--切换成-->
+                            <div class="third_examine switch_box">
+                                <h4>文章状态</h4>
+                                <div class="third_examine_con switch_btn_box">
+                                    <div class="switch_btn" id="ph_btn" style="display:none;">
+                                        <a href="https://www.baidu.com/?tn=57095150_2_oem_dg" target="PHIframe">
+                                            手机版
+                                        </a>
+                                    </div>
+                                    <div class="switch_btn" id="pc_btn">
+                                        <a href="javascript:;" target="PCIframe">
+                                            电脑版
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--展示iframe-->
+                        <div class="exhibition_box">
+                            <div class="PC_box" id="PC_box" style="display:none;">
+                                <iframe id="PCIframe" name="PCIframe" frameborder="0" scrolling="yes" src="home.html"></iframe>
+                            </div>
+                            <div class="phone_box" id="phone_box">
+                                <iframe id="PHIframe" name="PHIframe" frameborder="0" scrolling="yes" src="home.html"></iframe>
+                            </div>
+                        </div>
+                        <!--功能按钮-->
+                        <div class="func_box">
+                            <ol class="func_btn_box" stepNum="3">
+                                <li class="func_blue release_3">
+                                    <a href="javascript:;">
+                                        <button type="button">发布</button>
+                                    </a>
+                                </li>
+                                <li class="func_green last_step">
+                                    <a href="javascript:;">
+                                        <button type="button">上一步</button>
+                                    </a>
+                                </li>
+                                <li class="func_o locking_3">
+                                    <a href="javascript:;">
+                                        <button type="button" disabled="disabled">锁定</button>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!--声明-->
+                    <div class="statement_box">汽场（北京）信息科技有限公司</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩-->
+    <div class="myself_mark" id="myself_mark" style="display:none;"></div>
+    <div id="dialog_yulan" class="ale_win_con" style="display:none;">
+        <iframe id="firstYl_frame" name="firstYl_frame" frameborder="0" scrolling="yes" src=""></iframe>
+    </div>
+    <div id="jianji_box" class="ale_win_con" style="display:none;">
+        <iframe id="shear_frame" name="shear_frame" frameborder="0" scrolling="yes" src=""></iframe>
+    </div>
+    <!--封面图片-->
+    <div class="ale_win_con" id="fengmianPic" style="display:none;">
+        <!--封面图片的关闭按钮-->
+        <a href="javascript:;" id="close_btn_feng"></a>
+    </div>
